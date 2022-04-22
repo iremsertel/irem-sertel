@@ -6,10 +6,10 @@ const geocode = (address, callback) => {
     request( {url: url, json:true}, (error,response) => {
         if (error){
           
-            callback('Unable to connect to geocoding services', undefined)
+            callback('bulunamadi', undefined)
         } else if (response.body.features.length === 0){
          
-           callback('Unable to find location.Try another search', undefined)
+           callback('bulunamadi tekrar deneyin', undefined)
         }
         else {
             callback(undefined, {
