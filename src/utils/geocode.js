@@ -5,10 +5,8 @@ const geocode = (address, callback) => {
     
     request( {url: url, json:true}, (error,response) => {
         if (error){
-          
             callback('bulunamadi', undefined)
         } else if (response.body.features.length === 0){
-         
            callback('bulunamadi tekrar deneyin', undefined)
         }
         else {

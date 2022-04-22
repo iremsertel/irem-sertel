@@ -1,6 +1,7 @@
 const express = require('express')
 const weather = require('./weather.js')
 const geocode = require('./geocode.js')
+const { isArgumentsObject } = require('util/types')
 var app = express()
 
 const port = process.env.PORT || 3000
@@ -11,7 +12,11 @@ app.get('/', (request, response) => {
 })
 
 app.get('/test_json', (request, response) => {
-    response.send('homepage')
+    response.send({
+        ad: irem,
+        soyad: sertel
+
+    })
   
 })
 
